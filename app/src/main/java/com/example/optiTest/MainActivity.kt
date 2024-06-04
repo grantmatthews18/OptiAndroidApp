@@ -25,22 +25,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //packaged datafile found in /app/optiDatafile/datafile.json
-        //packaged datafile is for prod env of account 25040710181 (grant.matthews@optimizely.com)
-        //packaged datafile is for project 27607540484
-        //Fresh datafile will be fetched by OptimizelyManager and this should be ignored
-
-        val sdkKey: String = "2a6qXYH7XRi9DQezV4amE"
-
-        //Opti User Variables
-        val attributes: MutableMap<String, Any> = HashMap<String, Any>()
-        //Add attributes here
-        attributes["logged_in"] = true
-        //Set User ID
-        val userID = "user123"
+        //Specify SDK of env
+        val sdkKey: String = "SDK_Key_Here"
 
         //Flag Key
-        val flagKey = "test_flag"
+        val flagKey = "Flag_key_here"
+
+        //Add user attributes here
+        val attributes: MutableMap<String, Any> = HashMap<String, Any>()
+        //attributes["attribute"] = "value"
+
+        //Set User ID
+        val userID = "user123"
 
         //Execute Code
         val optimizelyManager = OptimizelyManager.builder()
